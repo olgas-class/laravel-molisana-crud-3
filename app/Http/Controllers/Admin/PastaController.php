@@ -22,7 +22,7 @@ class PastaController extends Controller
      */
     public function create()
     {
-        //
+        return view("pastas.create");
     }
 
     /**
@@ -30,7 +30,12 @@ class PastaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->all();
+        $pasta = new Pasta();
+        $pasta->fill($data);
+        $pasta->save();
+
+        return redirect()->route("pastas.show", ["pasta" => $pasta->id]);
     }
 
     /**
