@@ -18,5 +18,10 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
+
+        //grazie a questo non bisogna specificare la classe nel terminale al run del seeder
+        $this->call([
+            PastasTableSeeder::class
+        ]);
     }
 }
