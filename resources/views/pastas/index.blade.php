@@ -21,7 +21,7 @@
                         <th scope="row">{{ $item->id }}</th>
                         <td>{{ $item->title }}</td>
                         <td>{{ $item->type }}</td>
-                        <td></td>
+                        <td><a href="{{route('pastas.show',['pasta'=>$item->id])}}">Dettagli</a></td>
                     </tr>
                 @endforeach
             </tbody>
