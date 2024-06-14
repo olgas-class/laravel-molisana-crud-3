@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\PastaController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +17,5 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('home');
 });
+
+Route::resource('pastas', PastaController::class);
