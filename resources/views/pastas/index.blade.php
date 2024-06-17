@@ -22,7 +22,10 @@
             <th scope="row">{{ $item->id }}</th>
             <td>{{ $item->title }}</td>
             <td>{{ $item->type }}</td>
-            <td><a href="{{ route('pastas.show', ['pasta' => $item->id]) }}">Dettagli</a></td>
+            <td>
+              <a href="{{ route('pastas.show', ['pasta' => $item->id]) }}">Dettagli</a>
+              <a href="{{route('pastas.edit' , ['pasta' => $item->id])}}">Modifica</a>
+            </td>
           </tr>
         @endforeach
       </tbody>

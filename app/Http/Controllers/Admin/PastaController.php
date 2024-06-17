@@ -50,9 +50,9 @@ class PastaController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(Pasta $pasta)
     {
-        //
+        return view('pastas.edit' , compact('pasta'));
     }
 
     /**
