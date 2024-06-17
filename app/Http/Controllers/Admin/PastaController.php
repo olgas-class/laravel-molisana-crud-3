@@ -58,9 +58,13 @@ class PastaController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, Pasta $pasta)
     {
-        //
+        $data = $request->all();
+        $pasta->update($data);
+        //reindirizza all'index
+        return redirect()->route('pastas.index');
+        // return redirect()->route('pastas.show', ["pasta" => $pasta->id] );
     }
 
     /**
