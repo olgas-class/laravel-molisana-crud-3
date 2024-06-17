@@ -25,6 +25,12 @@
             <td>
               <a href="{{ route('pastas.show', ['pasta' => $item->id]) }}">Dettagli</a>
               <a href="{{route('pastas.edit' , ['pasta' => $item->id])}}">Modifica</a>
+              <form action="{{ route('pastas.destroy', ['pasta' => $item->id])}}" method="POST">
+                @csrf
+                @method('DELETE')
+                <button>cancella</button>
+              </form>
+              
             </td>
           </tr>
         @endforeach

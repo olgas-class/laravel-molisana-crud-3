@@ -70,8 +70,9 @@ class PastaController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Pasta $pasta)
     {
-        //
+        $pasta->delete();
+        return redirect()->route('pastas.index');
     }
 }
